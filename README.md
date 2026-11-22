@@ -1,3 +1,8 @@
+# This have been done with AI but human check and read. 
+
+# this fix was only because it hate how it would randomly disconnect from my headset.  have fun
+
+
 # Samsung TV Bluetooth audio keepalive
 
 A TV-local workaround for Bluetooth audio becoming silent or distorted after
