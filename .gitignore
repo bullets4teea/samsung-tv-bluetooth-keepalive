@@ -1,0 +1,5 @@
+headphone-address
+*.stock
+*.tar.gz
+*.log
+__pycache__/

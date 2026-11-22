@@ -1,0 +1,20 @@
+[Unit]
+Description=Bluetooth silent PCM audio workaround
+After=dbus.service pulseaudio.service btapp-service.service
+
+[Service]
+Type=simple
+User=sdk
+Group=sdk
+SupplementaryGroups=audio
+SmackProcessLabel=System
+Environment=PULSE_SERVER=unix:/run/pulse/native
+Environment=XDG_RUNTIME_DIR=/run
+RuntimeDirectory=tv-audio-keepalive
+RuntimeDirectoryMode=0755
+ExecStart=/bin/bash -c '. /opt/usr/share/tv-audio-keepalive/worker.sh'
+Restart=always
+RestartSec=5
+KillMode=control-group
+TimeoutStopSec=12
+UMask=0022
